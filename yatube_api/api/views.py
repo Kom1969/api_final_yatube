@@ -13,7 +13,6 @@ from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    permission_classes = (IsAuthenticatedOrReadOnly, IsAuthorOrReadOnly)
 
 
 class PostViewSet(viewsets.ModelViewSet):
